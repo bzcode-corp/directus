@@ -1,0 +1,7 @@
+{
+  "extends": "@directus/extensions-sdk/tsconfig.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "declaration": false
+  }
+}
