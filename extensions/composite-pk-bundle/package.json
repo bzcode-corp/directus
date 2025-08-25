@@ -1,0 +1,25 @@
+{
+  "name": "@your-org/directus-composite-pk-bundle",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Composite primary key support for Directus",
+  "license": "MIT",
+  "private": true,
+  "directus:extension": {
+    "type": "bundle",
+    "host": "^11.0.0",
+    "path": { "app": "dist/app.js", "api": "dist/api.js" },
+    "entries": [
+      { "type": "endpoint", "name": "composite-items", "source": "./src/endpoints/composite-items/index.ts" },
+      { "type": "module",   "name": "composite-content", "source": "./src/modules/composite-content/index.ts" }
+    ]
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "watch": "directus-extension build --watch"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "^11.0.0",
+    "typescript": "^5.4.0"
+  }
+}
